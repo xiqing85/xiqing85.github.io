@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiBee Eye — open-source smart camera family</title>
+  <meta name="description" content="MiBee Eye (蜂眼) is a family of Apache-2.0 open-source projects that turn any Linux board — or the PC on your desk — into a standards-compliant smart IP camera: ONVIF Profile S, GB/T 28181-2022, RTSP/RTMP, on-device AI, and a unified web UI.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MiBee Eye — open-source smart camera family">
+  <meta property="og:description" content="Turn any Linux board — or your PC — into a smart IP camera. ONVIF Profile S · GB/T 28181-2022 · RTSP/RTMP · on-device AI · unified web UI. Apache-2.0.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="MiBee Eye home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 27.5 9v14L16 29.5 4.5 23V9Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="16" cy="16" r="4.4" fill="currentColor"/></svg>
+      <span class="brand-name">MiBee&nbsp;Eye</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#capabilities" data-i18n="nav.capabilities">Capabilities</a>
+      <a href="#choose" data-i18n="nav.choose">Rust or Go?</a>
+      <a href="#libraries" data-i18n="nav.libraries">Libraries</a>
+      <a class="nav-gh" href="https://github.com/xiqing85" target="_blank" rel="noopener">GitHub<span class="ext" aria-hidden="true">↗</span></a>
+      <button id="lang-toggle" type="button" aria-label="Switch language">中文</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Open-source camera software family</p>
+          <h1>MiBee Eye <span class="hero-sub" lang="zh-CN">蜂眼</span></h1>
+          <p class="lead" data-i18n="hero.lead">Turn any Linux board — or the PC on your desk — into a standards-compliant smart IP camera. ONVIF Profile&nbsp;S, GB/T&nbsp;28181-2022, RTSP/RTMP, on-device AI, and one unified web UI.</p>
+          <ul class="chips" aria-label="Highlights">
+            <li>ONVIF Profile S + Media2</li>
+            <li>GB/T 28181-2022</li>
+            <li>GB 35114 A-level</li>
+            <li>RTSP · RTMP</li>
+            <li>On-device AI</li>
+            <li>SPEC v1 Web UI</li>
+            <li>Apache-2.0</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects" data-i18n="hero.cta1">Meet the family</a>
+            <a class="btn" href="#choose" data-i18n="hero.cta2">Which one fits me?</a>
+          </div>
+        </div>
+
+        <div class="hero-art" role="img" aria-label="MiBee Eye sits between camera sources and NVRs, GB28181 platforms, browsers and RTMP clouds">
+          <svg viewBox="0 0 560 400" text-anchor="middle" aria-hidden="true">
+            <!-- source column -->
+            <rect x="18" y="140" width="128" height="120" rx="12" class="svg-box"/>
+            <text x="82" y="168" class="svg-t svg-t-title" data-i18n="hero.svg.source">Camera source</text>
+            <text x="82" y="192" class="svg-t">CSI module</text>
+            <text x="82" y="210" class="svg-t">USB / UVC</text>
+            <text x="82" y="228" class="svg-t">RTSP source</text>
+            <text x="82" y="246" class="svg-t">PC cam + mic</text>
+
+            <!-- center hexagon -->
+            <path d="M280 62 L352 103 L352 185 L280 226 L208 185 L208 103 Z" class="svg-hex"/>
+            <text x="280" y="128" class="svg-t svg-t-hex">MiBee Eye</text>
+            <text x="280" y="152" class="svg-t svg-t-dim">V4L2 · H.264</text>
+            <text x="280" y="170" class="svg-t svg-t-dim">AI · OSD · REC</text>
+            <text x="280" y="188" class="svg-t svg-t-dim">Web UI</text>
+
+            <!-- consumer column -->
+            <rect x="418" y="34" width="126" height="72" rx="12" class="svg-box"/>
+            <text x="481" y="62" class="svg-t svg-t-title">NVR / VMS</text>
+            <text x="481" y="84" class="svg-t">ONVIF · RTSP</text>
+
+            <rect x="418" y="130" width="126" height="72" rx="12" class="svg-box"/>
+            <text x="481" y="158" class="svg-t svg-t-title" data-i18n="hero.svg.platform">GB28181 platform</text>
+            <text x="481" y="180" class="svg-t">SIP · RTP/PS</text>
+
+            <rect x="418" y="226" width="126" height="72" rx="12" class="svg-box"/>
+            <text x="481" y="254" class="svg-t svg-t-title" data-i18n="hero.svg.browser">Browser</text>
+            <text x="481" y="276" class="svg-t">Web UI · SSE</text>
+
+            <rect x="418" y="322" width="126" height="60" rx="12" class="svg-box"/>
+            <text x="481" y="348" class="svg-t svg-t-title" data-i18n="hero.svg.cloud">RTMP cloud</text>
+            <text x="481" y="368" class="svg-t">push</text>
+
+            <!-- arrows -->
+            <path d="M146 200 H198" class="svg-arrow"/>
+            <path d="M192 193 L201 200 L192 207" class="svg-arrow-head"/>
+            <path d="M354 184 L412 70"  class="svg-arrow"/>
+            <path d="M354 184 L412 166" class="svg-arrow"/>
+            <path d="M354 184 L412 262" class="svg-arrow"/>
+            <path d="M354 184 L412 352" class="svg-arrow"/>
+            <circle cx="415" cy="70"  r="3.2" class="svg-port"/>
+            <circle cx="415" cy="166" r="3.2" class="svg-port"/>
+            <circle cx="415" cy="262" r="3.2" class="svg-port"/>
+            <circle cx="415" cy="352" r="3.2" class="svg-port"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section">
+      <div class="wrap">
+        <h2 data-i18n="projects.title">One family, four projects</h2>
+        <p class="section-lead" data-i18n="projects.lead">Three device services — Go, Rust, and a PC-local agent — plus the shared web frontend &amp; API spec that keeps them one product.</p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-head">
+              <span class="tag tag-rust">Rust</span>
+              <span class="card-tagline" data-i18n="card.rs.tag">The in-process build</span>
+            </div>
+            <h3><a href="https://github.com/xiqing85/mibee-eye-rs" target="_blank" rel="noopener">mibee-eye-rs</a></h3>
+            <p data-i18n="card.rs.desc">Native V4L2 capture and fully in-process encoding — V4L2&nbsp;M2M hardware with automatic openh264 fallback, zero subprocesses. A ~2&nbsp;MB static binary for the most constrained boards, OSD watermark burned into every output, and an optional GB&nbsp;35114 A-level security build.</p>
+            <ul class="chips chips-sm">
+              <li>Rust 1.88+</li>
+              <li>~2 MB static</li>
+              <li>zero subprocess</li>
+              <li>M2M + openh264</li>
+              <li>GB 35114 opt-in</li>
+            </ul>
+            <div class="card-foot">
+              <a class="btn btn-sm" href="https://github.com/xiqing85/mibee-eye-rs" target="_blank" rel="noopener" data-i18n="card.visit">View on GitHub</a>
+              <span class="badges">
+                <img loading="lazy" src="https://img.shields.io/github/stars/xiqing85/mibee-eye-rs?style=flat-square&color=ffc53d" alt="stars">
+                <img loading="lazy" src="https://img.shields.io/github/v/release/xiqing85/mibee-eye-rs?style=flat-square&label=release" alt="latest release">
+                <img loading="lazy" src="https://img.shields.io/badge/license-Apache--2.0-007ec6?style=flat-square" alt="Apache-2.0">
+              </span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <span class="tag tag-go">Go</span>
+              <span class="card-tagline" data-i18n="card.go.tag">The quickest path</span>
+            </div>
+            <h3><a href="https://github.com/xiqing85/mibee-eye-go" target="_blank" rel="noopener">mibee-eye-go</a></h3>
+            <p data-i18n="card.go.desc">Pure Go, zero CGO — stock cross-compilation out of the box. Three capture profiles: libcamera CSI on Raspberry&nbsp;Pi, generic V4L2 / USB-UVC on any board, and <code>rtsp</code> gateway mode that re-publishes an existing stream as an ONVIF/GB28181 device from any box. HLS browser playback and an i18n web UI included.</p>
+            <ul class="chips chips-sm">
+              <li>Go 1.26</li>
+              <li>zero CGO</li>
+              <li>libcamera · UVC · rtsp</li>
+              <li>HLS</li>
+              <li>i18n UI</li>
+            </ul>
+            <div class="card-foot">
+              <a class="btn btn-sm" href="https://github.com/xiqing85/mibee-eye-go" target="_blank" rel="noopener" data-i18n="card.visit">View on GitHub</a>
+              <span class="badges">
+                <img loading="lazy" src="https://img.shields.io/github/stars/xiqing85/mibee-eye-go?style=flat-square&color=ffc53d" alt="stars">
+                <img loading="lazy" src="https://img.shields.io/github/v/release/xiqing85/mibee-eye-go?style=flat-square&label=release" alt="latest release">
+                <img loading="lazy" src="https://img.shields.io/badge/license-Apache--2.0-007ec6?style=flat-square" alt="Apache-2.0">
+              </span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <span class="tag tag-rust">Rust</span>
+              <span class="card-tagline" data-i18n="card.nb.tag">The PC-local agent</span>
+            </div>
+            <h3><a href="https://github.com/xiqing85/mibee-eye-notebook" target="_blank" rel="noopener">mibee-eye-notebook</a></h3>
+            <p data-i18n="card.nb.desc">Turns the webcam and microphone of the PC in front of you into a privacy-first local capture agent: a TLS-gated web UI as the primary control surface, outbound streaming default-off. On-device intelligence — a voice assistant (wake word → transcription → local LLM → TTS), object &amp; sound-event detection, OCR, and VLM alarm descriptions.</p>
+            <ul class="chips chips-sm">
+              <li>Rust workspace</li>
+              <li>TLS web UI</li>
+              <li>voice assistant</li>
+              <li>fail-open AI</li>
+              <li>resource-adaptive</li>
+            </ul>
+            <div class="card-foot">
+              <a class="btn btn-sm" href="https://github.com/xiqing85/mibee-eye-notebook" target="_blank" rel="noopener" data-i18n="card.visit">View on GitHub</a>
+              <span class="badges">
+                <img loading="lazy" src="https://img.shields.io/github/stars/xiqing85/mibee-eye-notebook?style=flat-square&color=ffc53d" alt="stars">
+                <img loading="lazy" src="https://img.shields.io/github/v/release/xiqing85/mibee-eye-notebook?style=flat-square&label=release" alt="latest release">
+                <img loading="lazy" src="https://img.shields.io/badge/license-Apache--2.0-007ec6?style=flat-square" alt="Apache-2.0">
+              </span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <span class="tag tag-spec">SPEC v1</span>
+              <span class="card-tagline" data-i18n="card.ui.tag">The shared frontend &amp; spec</span>
+            </div>
+            <h3><a href="https://github.com/xiqing85/mibee-eye-webui" target="_blank" rel="noopener">mibee-eye-webui</a></h3>
+            <p data-i18n="card.ui.desc">One zero-build, zero-dependency ES-module frontend and one SPEC&nbsp;v1 API contract shared by the whole family. The UI renders panels from each device's announced capabilities; a spec-conformant mock server lets you develop the frontend without any hardware.</p>
+            <ul class="chips chips-sm">
+              <li>SPEC v1</li>
+              <li>zero build</li>
+              <li>capability-gated</li>
+              <li>mock server</li>
+            </ul>
+            <div class="card-foot">
+              <a class="btn btn-sm" href="https://github.com/xiqing85/mibee-eye-webui" target="_blank" rel="noopener" data-i18n="card.visit">View on GitHub</a>
+              <span class="badges">
+                <img loading="lazy" src="https://img.shields.io/github/stars/xiqing85/mibee-eye-webui?style=flat-square&color=ffc53d" alt="stars">
+                <img loading="lazy" src="https://img.shields.io/badge/license-Apache--2.0-007ec6?style=flat-square" alt="Apache-2.0">
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CAPABILITIES ================= -->
+    <section id="capabilities" class="section section-alt">
+      <div class="wrap">
+        <h2 data-i18n="cap.title">What every MiBee Eye camera speaks</h2>
+        <p class="section-lead" data-i18n="cap.lead">One capture pipeline fans out to every standard a camera is asked to speak — NVRs discover it, platforms register it, browsers manage it.</p>
+
+        <div class="cards cards-feat">
+          <article class="feat">
+            <h3 data-i18n="cap.gb28181.t">GB/T 28181-2022 device</h3>
+            <p data-i18n="cap.gb28181.d">SIP registration (UDP/TCP), Catalog / DeviceInfo / RecordInfo queries, live / playback / download RTP·PS streaming, SIP&nbsp;INFO playback control, alarm NOTIFY with rising-edge + cooldown, and graceful deregistration (Expires:0) on shutdown.</p>
+          </article>
+          <article class="feat">
+            <h3 data-i18n="cap.gb35114.t">GB 35114 A-level, opt-in</h3>
+            <p data-i18n="cap.gb35114.d">SM2 certificate REGISTER authentication plus keyed-SM3 integrity — the 35114 security profile rides the same GB28181 stack as a build feature.</p>
+          </article>
+          <article class="feat">
+            <h3 data-i18n="cap.onvif.t">ONVIF Profile S + Media2</h3>
+            <p data-i18n="cap.onvif.d">Device / Media / Imaging / PTZ SOAP services, Media2, Pull-Point &amp; push events, WS-Discovery auto-discovery. Tested against Synology Surveillance Station, Blue Iris, Scrypted — and any ONVIF NVR.</p>
+          </article>
+          <article class="feat">
+            <h3 data-i18n="cap.stream.t">RTSP · RTMP · substream</h3>
+            <p data-i18n="cap.stream.d">H.264 RTSP server (RTP over TCP or UDP), a low-bitrate substream for narrow links, RTMP push to cloud services, and HLS browser playback in the Go build — all tapping the same encoded frames.</p>
+          </article>
+          <article class="feat">
+            <h3 data-i18n="cap.rec.t">Recording &amp; playback</h3>
+            <p data-i18n="cap.rec.d">Continuous segments with an index, retention and storage caps, and the archive doubles as the GB28181 playback source — the platform can seek your local history.</p>
+          </article>
+          <article class="feat">
+            <h3 data-i18n="cap.ai.t">On-device AI, fail-open</h3>
+            <p data-i18n="cap.ai.d">NanoDet object detection taps shared pre-encode frames and never blocks the pipeline; a missing model honestly degrades the capability instead of fabricating detections. The notebook agent adds sound events, OCR, VLM descriptions and a voice assistant.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CHOOSE ================= -->
+    <section id="choose" class="section">
+      <div class="wrap wrap-narrow">
+        <h2 data-i18n="choose.title">Rust or Go — which one should I use?</h2>
+        <p class="section-lead" data-i18n="choose.lead">Same protocols, same SPEC v1 web UI, same NVR interoperability — pick by deployment profile.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="choose.thGo">Pick the Go build when…</th>
+                <th data-i18n="choose.thRs">Pick the Rust build when…</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cell-label cell-go">Go</span><span data-i18n="choose.r1a">You want the quickest path: zero-CGO build, stock cross-compile</span></td>
+                <td><span class="cell-label cell-rust">Rust</span><span data-i18n="choose.r1b">The board is memory / flash constrained (~2 MB binary)</span></td>
+              </tr>
+              <tr>
+                <td><span class="cell-label cell-go">Go</span><span data-i18n="choose.r2a">You want HLS browser playback out of the box</span></td>
+                <td><span class="cell-label cell-rust">Rust</span><span data-i18n="choose.r2b">You want the OSD watermark burned into every output</span></td>
+              </tr>
+              <tr>
+                <td><span class="cell-label cell-go">Go</span><span data-i18n="choose.r3a">You need the i18n UI or the runtime metrics API</span></td>
+                <td><span class="cell-label cell-rust">Rust</span><span data-i18n="choose.r3b">You want capture + encode fully in-process (no subprocesses)</span></td>
+              </tr>
+              <tr>
+                <td><span class="cell-label cell-go">Go</span><span data-i18n="choose.r4a">You prefer hacking on a Go codebase</span></td>
+                <td><span class="cell-label cell-rust">Rust</span><span data-i18n="choose.r4b">You prefer hacking on a Rust codebase</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="note" data-i18n="choose.both">Both ship AI detection (NanoDet, opt-in), GB 35114 A-level (opt-in), continuous recording with GB28181 playback, imaging controls and snapshots. And when the "camera" is simply the PC on your desk — that's <a href="https://github.com/xiqing85/mibee-eye-notebook" target="_blank" rel="noopener">mibee-eye-notebook</a>.</p>
+      </div>
+    </section>
+
+    <!-- ================= LIBRARIES ================= -->
+    <section id="libraries" class="section section-alt">
+      <div class="wrap">
+        <h2 data-i18n="lib.title">Powered by open protocol libraries</h2>
+        <p class="section-lead" data-i18n="lib.lead">The protocol heavy lifting is extracted into reusable libraries — wire formats pinned by golden tests, built test-first, and available for your next device.</p>
+
+        <div class="cards cards-lib">
+          <a class="lib" href="https://github.com/mickeyzzc/gb28181-rs" target="_blank" rel="noopener">
+            <span class="tag tag-rust">Rust</span>
+            <h3>gb28181-rs</h3>
+            <p data-i18n="lib.rs1.d">GB/T 28181 device-side library — SIP REGISTER/INVITE, MANSCDP XML, RTP·PS, subscriptions &amp; NOTIFY, 35114 auth.</p>
+          </a>
+          <a class="lib" href="https://github.com/mickeyzzc/gb28181-go" target="_blank" rel="noopener">
+            <span class="tag tag-go">Go</span>
+            <h3>gb28181-go</h3>
+            <p data-i18n="lib.go1.d">GB/T 28181 in Go — the device/ UAC consumed by the camera, plus the MANSCDP codec ready for platform-side projects.</p>
+          </a>
+          <a class="lib" href="https://github.com/mickeyzzc/onvif-rs" target="_blank" rel="noopener">
+            <span class="tag tag-rust">Rust</span>
+            <h3>onvif-rs</h3>
+            <p data-i18n="lib.rs2.d">ONVIF Device service in Rust — SOAP/XML, WS-Discovery, Profile S surface.</p>
+          </a>
+          <a class="lib" href="https://github.com/mickeyzzc/onvif-go" target="_blank" rel="noopener">
+            <span class="tag tag-go">Go</span>
+            <h3>onvif-go</h3>
+            <p data-i18n="lib.go2.d">ONVIF client + server in Go — the same engine behind the Go camera's device service.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER CTA ================= -->
+    <section class="section cta-band">
+      <div class="wrap wrap-narrow">
+        <h2 data-i18n="cta.title">Open your camera</h2>
+        <p class="section-lead" data-i18n="cta.lead">Flash a board, point it at your NVR, and manage it from the browser. Star the repos, open issues, send PRs — contributions welcome.</p>
+        <div class="cta-row cta-center">
+          <a class="btn btn-primary" href="https://github.com/xiqing85?tab=repositories" target="_blank" rel="noopener" data-i18n="cta.btn">Browse on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot-grid">
+      <div>
+        <p class="foot-brand">MiBee Eye <span lang="zh-CN">蜂眼</span></p>
+        <p class="foot-note" data-i18n="foot.note">A family of Apache-2.0 open-source projects. This site is plain HTML/CSS/JS — no build step, no tracking.</p>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="https://github.com/xiqing85/mibee-eye-rs" target="_blank" rel="noopener">mibee-eye-rs</a>
+        <a href="https://github.com/xiqing85/mibee-eye-go" target="_blank" rel="noopener">mibee-eye-go</a>
+        <a href="https://github.com/xiqing85/mibee-eye-notebook" target="_blank" rel="noopener">mibee-eye-notebook</a>
+        <a href="https://github.com/xiqing85/mibee-eye-webui" target="_blank" rel="noopener">mibee-eye-webui</a>
+      </nav>
+      <p class="foot-license">© 2026 MiBee Eye contributors · Apache-2.0</p>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>
