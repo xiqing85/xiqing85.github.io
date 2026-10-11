@@ -19,7 +19,8 @@ badges are the only external requests.
 - `index.html` — content; every translatable node carries `data-i18n="key"`
 - `assets/style.css` — theme
 - `assets/app.js` — bilingual dictionary + toggle (keep the `en` values in sync
-  with the HTML: the page ships English and swaps to Chinese via JS)
+  with the HTML: the page ships English and swaps to Chinese via JS). The
+  language can be forced per-link with `?lang=zh` / `?lang=en`
 - `assets/favicon.svg` — hexagon mark
 
 Push to `main` — GitHub Pages serves the root of `main` (`.nojekyll` present).
