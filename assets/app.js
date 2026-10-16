@@ -43,7 +43,7 @@ const DICT = {
       "One capture pipeline fans out to every standard a camera is asked to speak — NVRs discover it, platforms register it, browsers manage it.",
     "cap.gb28181.t": "GB/T 28181-2022 device",
     "cap.gb28181.d":
-      "SIP registration (UDP/TCP), Catalog / DeviceInfo / RecordInfo queries, live / playback / download RTP·PS streaming, SIP&nbsp;INFO playback control, alarm NOTIFY with rising-edge + cooldown, and graceful deregistration (Expires:0) on shutdown.",
+      "SIP registration over UDP, TCP (inbound or device-dialed) or SIPS/TLS with negotiated expiry and redial; paginated Catalog/RecordInfo answers plus the 2022 five info queries; live/playback/download over RTP·PS or ES-over-RTP (TCP passive/active, multicast); talkback and voice broadcast; alarm/position NOTIFYs; graceful deregistration (Expires:0) on shutdown.",
     "cap.gb35114.t": "GB 35114 A-level, opt-in",
     "cap.gb35114.d":
       "SM2 certificate REGISTER authentication plus keyed-SM3 integrity — the 35114 security profile rides the same GB28181 stack as a build feature.",
@@ -80,9 +80,9 @@ const DICT = {
     "lib.lead":
       "The protocol heavy lifting is extracted into reusable libraries — wire formats pinned by golden tests, built test-first, and available for your next device.",
     "lib.rs1.d":
-      "GB/T 28181 device-side library — SIP REGISTER/INVITE, MANSCDP XML, RTP·PS, subscriptions &amp; NOTIFY, 35114 auth.",
+      "GB/T 28181 device-side library — SIP REGISTER/INVITE over UDP/TCP/SIPS, MANSCDP XML, RTP·PS, subscriptions & NOTIFY, 35114 auth.",
     "lib.go1.d":
-      "GB/T 28181 in Go — the device/ UAC consumed by the camera, plus the MANSCDP codec ready for platform-side projects.",
+      "GB/T 28181 in Go — the device/ UAC consumed by the camera, plus the platform/ UAS powering NVR-side projects: registry, PS/ES demux, INVITE/BYE sessions, cascade, and audio-only pickup channels (type-136 voice inputs).",
     "lib.rs2.d": "ONVIF Device service in Rust — SOAP/XML, WS-Discovery, Profile S surface.",
     "lib.go2.d":
       "ONVIF client + server in Go — the same engine behind the Go camera's device service.",
@@ -136,7 +136,7 @@ const DICT = {
       "一条采集管线，扇出到摄像头被要求讲述的每一门标准——NVR 能发现它，平台能注册它，浏览器能管理它。",
     "cap.gb28181.t": "GB/T 28181-2022 设备侧",
     "cap.gb28181.d":
-      "SIP 注册（UDP/TCP）、目录 / 设备信息 / 录像信息查询、实时 / 回放 / 下载 RTP·PS 流、SIP&nbsp;INFO 回放控制、上升沿 + 冷却的告警 NOTIFY，以及停机时的优雅注销（Expires:0）。",
+      "SIP 注册走 UDP、TCP（入站或设备外拨）或 SIPS/TLS（协商有效期、断线重拨）；目录/录像应答分页 + 2022 五组信息查询；实时/回放/下载走 RTP·PS 或 ES-over-RTP（TCP 主被动、组播）；对讲与语音广播；告警/位置 NOTIFY；停机优雅注销（Expires:0）。",
     "cap.gb35114.t": "GB 35114 A 级（可选）",
     "cap.gb35114.d":
       "SM2 证书注册认证 + keyed-SM3 完整性——35114 安全画像作为构建特性，与 GB28181 同栈启用。",
@@ -172,9 +172,9 @@ const DICT = {
     "lib.lead":
       "协议重活被抽成可复用的协议库——线格式由 golden 测试钉板、测试先行开发，也欢迎你的下一个设备来用。",
     "lib.rs1.d":
-      "GB/T 28181 设备侧库——SIP REGISTER/INVITE、MANSCDP XML、RTP·PS、订阅与 NOTIFY、35114 认证。",
+      "GB/T 28181 设备侧库——UDP/TCP/SIPS 上的 SIP REGISTER/INVITE、MANSCDP XML、RTP·PS、订阅与 NOTIFY、35114 认证。",
     "lib.go1.d":
-      "Go 版 GB/T 28181——摄像头在用的 device/ UAC，外加面向平台侧项目的 MANSCDP 编解码。",
+      "Go 版 GB/T 28181——摄像头在用的 device/ UAC，加上驱动 NVR 侧项目的 platform/ UAS：注册表、PS/ES 解复用、INVITE/BYE 会话、级联，以及纯音频拾音器通道（类型码 136 语音输入设备）。",
     "lib.rs2.d": "Rust 版 ONVIF Device 服务——SOAP/XML、WS-Discovery、Profile S 能力面。",
     "lib.go2.d": "Go 版 ONVIF 客户端 + 服务端——Go 摄像头设备服务背后的同一引擎。",
 

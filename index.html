@@ -215,7 +215,7 @@
         <div class="cards cards-feat">
           <article class="feat">
             <h3 data-i18n="cap.gb28181.t">GB/T 28181-2022 device</h3>
-            <p data-i18n="cap.gb28181.d">SIP registration (UDP/TCP), Catalog / DeviceInfo / RecordInfo queries, live / playback / download RTP·PS streaming, SIP&nbsp;INFO playback control, alarm NOTIFY with rising-edge + cooldown, and graceful deregistration (Expires:0) on shutdown.</p>
+            <p data-i18n="cap.gb28181.d">SIP registration over UDP, TCP (inbound or device-dialed) or SIPS/TLS with negotiated expiry and redial; paginated Catalog/RecordInfo answers plus the 2022 five info queries; live/playback/download over RTP·PS or ES-over-RTP (TCP passive/active, multicast); talkback and voice broadcast; alarm/position NOTIFYs; graceful deregistration (Expires:0) on shutdown.</p>
           </article>
           <article class="feat">
             <h3 data-i18n="cap.gb35114.t">GB 35114 A-level, opt-in</h3>
@@ -290,12 +290,12 @@
           <a class="lib" href="https://github.com/mickeyzzc/gb28181-rs" target="_blank" rel="noopener">
             <span class="tag tag-rust">Rust</span>
             <h3>gb28181-rs</h3>
-            <p data-i18n="lib.rs1.d">GB/T 28181 device-side library — SIP REGISTER/INVITE, MANSCDP XML, RTP·PS, subscriptions &amp; NOTIFY, 35114 auth.</p>
+            <p data-i18n="lib.rs1.d">GB/T 28181 device-side library — SIP REGISTER/INVITE over UDP/TCP/SIPS, MANSCDP XML, RTP·PS, subscriptions & NOTIFY, 35114 auth.</p>
           </a>
           <a class="lib" href="https://github.com/mickeyzzc/gb28181-go" target="_blank" rel="noopener">
             <span class="tag tag-go">Go</span>
             <h3>gb28181-go</h3>
-            <p data-i18n="lib.go1.d">GB/T 28181 in Go — the device/ UAC consumed by the camera, plus the MANSCDP codec ready for platform-side projects.</p>
+            <p data-i18n="lib.go1.d">GB/T 28181 in Go — the device/ UAC consumed by the camera, plus the platform/ UAS powering NVR-side projects: registry, PS/ES demux, INVITE/BYE sessions, cascade, and audio-only pickup channels (type-136 voice inputs).</p>
           </a>
           <a class="lib" href="https://github.com/mickeyzzc/onvif-rs" target="_blank" rel="noopener">
             <span class="tag tag-rust">Rust</span>
